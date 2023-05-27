@@ -8142,6 +8142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609fc2de597cc6a4389df59c92ff01a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
   maxHealt: 0
   maxHunger: 0
   maxStamina: 0
@@ -8223,9 +8224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5e74061dd7a4344bd81e152b71a040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 1356313820}
   playerCamera: {fileID: 1255441152}
   mouseSensitivity: 3.5
-  walkSpeed: 6
+  walkSpeed: 2
   gravity: -13
   moveSmootTime: 0.3
   mouseSmootTime: 0.03
@@ -8233,6 +8235,10 @@ MonoBehaviour:
   jumpHeight: 1
   groundRaycastDistance: 0.2
   lockCursor: 1
+  cameraPitch: 0
+  velocityY: 0
+  isRunning: 0
+  isCrouching: 0
 --- !u!114 &1357517486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11933,11 +11939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e88bec1c92add0148bcddd543087ad06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 581.8445
+      value: 579.23
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e88bec1c92add0148bcddd543087ad06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.1
+      value: 14.8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e88bec1c92add0148bcddd543087ad06, type: 3}
       propertyPath: m_LocalPosition.z

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    public PlayerController playerController;
+
     public int maxHealt;
     public int maxHunger;
     public int maxStamina;
@@ -13,9 +15,9 @@ public class PlayerStats : MonoBehaviour
     public Image Hunger;
     public Image Stamina;
 
-    public float  HealInCreasedPerSecond;
-    public float  HungerInCreasedPerSecond;
-    public float  StaminaInCreasedPerSecond;
+    public float HealInCreasedPerSecond;
+    public float HungerInCreasedPerSecond;
+    public float StaminaInCreasedPerSecond;
 
     public Text HealthText;
     public Text HungerText;
@@ -26,19 +28,18 @@ public class PlayerStats : MonoBehaviour
     public float UpdatedStamina;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         HealInCreasedPerSecond = 5f;
         HungerInCreasedPerSecond = -1f;
-        StaminaInCreasedPerSecond = 1f;
+        StaminaInCreasedPerSecond = 1f; 
 
         maxHealt = 1000;
         maxHunger = 1000;
-        maxStamina = 100;
+        maxStamina = 8;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
         UpdatedHealth += HealInCreasedPerSecond * Time.deltaTime;
         Healt.fillAmount = UpdatedHealth / maxHealt;
@@ -67,5 +68,9 @@ public class PlayerStats : MonoBehaviour
         {
             UpdatedStamina = maxStamina;
         }
+        
+        Stamina.fillAmount = UpdatedStamina / maxStamina;
+        playerController.UpdateMovement();
+        
     }
 }
