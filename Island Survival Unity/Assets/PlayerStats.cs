@@ -27,20 +27,21 @@ public class PlayerStats : MonoBehaviour
     public float UpdatedHunger;
     public float UpdatedStamina;
 
-    // Start is called before the first frame update
     public void Start()
     {
         HealInCreasedPerSecond = 5f;
         HungerInCreasedPerSecond = -1f;
-        StaminaInCreasedPerSecond = 1f; 
+        StaminaInCreasedPerSecond = 0.8f; 
 
         maxHealt = 1000;
         maxHunger = 1000;
-        maxStamina = 8;
+        maxStamina = 10;
     }
 
     public void Update()
     {
+        playerController.UpdateMovement();
+
         UpdatedHealth += HealInCreasedPerSecond * Time.deltaTime;
         Healt.fillAmount = UpdatedHealth / maxHealt;
 
@@ -70,7 +71,6 @@ public class PlayerStats : MonoBehaviour
         }
         
         Stamina.fillAmount = UpdatedStamina / maxStamina;
-        playerController.UpdateMovement();
         
     }
 }

@@ -6,29 +6,30 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerStats playerStats;
 
-    [SerializeField] Transform playerCamera = null;
-    [SerializeField] float mouseSensitivity = 3.5f;
-    [SerializeField] float walkSpeed = 2.0f;
-    [SerializeField] float gravity = -13.0f;
-    [SerializeField][Range(0.0f, 0.5f)] float moveSmootTime = 0.3f;
-    [SerializeField][Range(0.0f, 0.5f)] float mouseSmootTime = 0.03f;
+    [SerializeField] private Transform playerCamera = null;
+    [SerializeField] private float mouseSensitivity = 3.5f;
+    [SerializeField] private float walkSpeed = 2.0f;
+    [SerializeField] private float runSpeed = 4.0f;
+    [SerializeField] private float gravity = -6.0f;
+    [SerializeField][Range(0.0f, 0.5f)] public float moveSmootTime = 0.3f;
+    [SerializeField][Range(0.0f, 0.5f)] public float mouseSmootTime = 0.03f;
 
     //JUMP
-    [SerializeField] float jumpForce = 5.0f;
-    [SerializeField] float jumpHeight = 1.0f;
-    [SerializeField] float groundRaycastDistance = 0.2f;
-    bool isJumping = false;
+    [SerializeField] private float jumpForce = 5.0f;
+    [SerializeField] private float jumpHeight = 1.0f;
+    [SerializeField] private float groundRaycastDistance = 0.2f;
+    public bool isJumping = false;
 
-    [SerializeField] bool lockCursor = true;
+    [SerializeField] private bool lockCursor = true;
 
-    public float cameraPitch = 0.0f;
-    public float velocityY = 0.0f;
+    private float cameraPitch = 0.0f;
+    private float velocityY = 0.0f;
 
-    CharacterController controller = null;
-    public bool isRunning = false;
-    public bool isCrouching = false;
-    public const float StandingHeight = 2.0f;
-    public const float CrouchingHeight = 1.0f;
+    private CharacterController controller = null;
+    private bool isRunning = false;
+    private bool isCrouching = false;
+    private const float StandingHeight = 2.0f;
+    private const float CrouchingHeight = 1.0f;
 
     Vector2 currentDir = Vector2.zero;
     Vector2 currentDirVelocity = Vector2.zero;
@@ -93,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
         velocityY += gravity * Time.deltaTime;
 
-        Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * (isRunning ? walkSpeed * 2 : walkSpeed) + Vector3.up * velocityY;
+        Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * (isRunning ? runSpeed : walkSpeed) + Vector3.up * velocityY;
 
         if (isCrouching)
         {

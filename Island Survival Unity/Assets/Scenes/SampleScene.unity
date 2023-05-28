@@ -8157,7 +8157,7 @@ MonoBehaviour:
   StaminaText: {fileID: 20486176}
   UpdatedHealth: 1000
   UpdatedHunger: 1000
-  UpdatedStamina: 100
+  UpdatedStamina: 10
 --- !u!1 &1357517482
 GameObject:
   m_ObjectHideFlags: 0
@@ -8228,17 +8228,15 @@ MonoBehaviour:
   playerCamera: {fileID: 1255441152}
   mouseSensitivity: 3.5
   walkSpeed: 2
-  gravity: -13
+  runSpeed: 4
+  gravity: -6
   moveSmootTime: 0.3
   mouseSmootTime: 0.03
   jumpForce: 5
   jumpHeight: 1
   groundRaycastDistance: 0.2
+  isJumping: 0
   lockCursor: 1
-  cameraPitch: 0
-  velocityY: 0
-  isRunning: 0
-  isCrouching: 0
 --- !u!114 &1357517486
 MonoBehaviour:
   m_ObjectHideFlags: 0
