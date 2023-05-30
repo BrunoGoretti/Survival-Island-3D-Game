@@ -31,7 +31,7 @@ public class PlayerStats : MonoBehaviour
     {
         HealInCreasedPerSecond = 5f;
         HungerInCreasedPerSecond = -1f;
-        StaminaInCreasedPerSecond = 0.8f; 
+        StaminaInCreasedPerSecond = 0.5f; 
 
         maxHealt = 1000;
         maxHunger = 1000;

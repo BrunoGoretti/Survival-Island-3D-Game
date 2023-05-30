@@ -9,32 +9,27 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform playerCamera = null;
     [SerializeField] private float mouseSensitivity = 3.5f;
     [SerializeField] private float walkSpeed = 2.0f;
-    [SerializeField] private float runSpeed = 4.0f;
+    [SerializeField] private float runSpeed;
     [SerializeField] private float gravity = -6.0f;
     [SerializeField][Range(0.0f, 0.5f)] public float moveSmootTime = 0.3f;
     [SerializeField][Range(0.0f, 0.5f)] public float mouseSmootTime = 0.03f;
-
-    //JUMP
-    [SerializeField] private float jumpForce = 5.0f;
     [SerializeField] private float jumpHeight = 1.0f;
-    [SerializeField] private float groundRaycastDistance = 0.2f;
-    public bool isJumping = false;
-
     [SerializeField] private bool lockCursor = true;
-
-    private float cameraPitch = 0.0f;
-    private float velocityY = 0.0f;
+    [SerializeField] public float CrouchingHeight = 0.1f;
 
     private CharacterController controller = null;
+    private float cameraPitch = 0.0f;
+    private float velocityY = 0.0f;
+    public bool isJumping = false;
     private bool isRunning = false;
     private bool isCrouching = false;
-    private const float StandingHeight = 2.0f;
-    private const float CrouchingHeight = 1.0f;
+    private float StandingHeight = 2.0f;
 
     Vector2 currentDir = Vector2.zero;
     Vector2 currentDirVelocity = Vector2.zero;
     Vector2 currentMouseDelta = Vector2.zero;
     Vector2 currentMouseDeltaVelocity = Vector2.zero;
+
     public void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -69,7 +64,8 @@ public class PlayerController : MonoBehaviour
 
     public void UpdateMovement()
     {
-        isRunning = Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W);
+        isRunning = Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) && !isCrouching;
+
         isCrouching = Input.GetKey(KeyCode.LeftControl);
 
         Vector2 targetDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -81,10 +77,11 @@ public class PlayerController : MonoBehaviour
         {
             velocityY = 0.0f;
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && !isCrouching)
             {
                 velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 isJumping = true;
+                playerStats.UpdatedStamina -= 1;
             }
             else
             {
@@ -98,6 +95,9 @@ public class PlayerController : MonoBehaviour
 
         if (isCrouching)
         {
+            isRunning = false;
+            isJumping = false;
+
             velocity *= 0.5f;
         }
 
@@ -115,6 +115,15 @@ public class PlayerController : MonoBehaviour
             {
                 playerStats.UpdatedStamina = 0;
             }
+        }
+
+        if (playerStats.UpdatedStamina <= 0)
+        {
+            runSpeed = 2;
+        }
+        else
+        {
+            runSpeed = 4;
         }
     }
 }

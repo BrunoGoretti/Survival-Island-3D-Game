@@ -1553,7 +1553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326030451}
   m_Layer: 0
-  m_Name: Crushed boath
+  m_Name: Crushed boat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3603,7 +3603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 451538, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.42
+      value: 12.3
       objectReference: {fileID: 0}
     - target: {fileID: 451538, guid: b22d7dcea44833b4ab41d64beb6e42c8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5002,7 +5002,7 @@ Transform:
   m_GameObject: {fileID: 849012804}
   m_LocalRotation: {x: -0.38705364, y: 0.6383071, z: 0.35955817, w: 0.55988526}
   m_LocalPosition: {x: 464.67, y: 11, z: 556.7}
-  m_LocalScale: {x: 0.24, y: 0.06, z: -0.9}
+  m_LocalScale: {x: 0.24, y: 0.06, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 326030451}
@@ -5900,7 +5900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5, y: -23.16}
+  m_AnchoredPosition: {x: -5, y: -23.159973}
   m_SizeDelta: {x: 266.23, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974320420
@@ -7076,7 +7076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5, y: 2.1}
+  m_AnchoredPosition: {x: -5, y: 2.1000366}
   m_SizeDelta: {x: 266.23, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211336129
@@ -8127,7 +8127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -734.8, y: -320.21}
+  m_AnchoredPosition: {x: -736.75, y: -341.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1356313820
@@ -8228,15 +8228,14 @@ MonoBehaviour:
   playerCamera: {fileID: 1255441152}
   mouseSensitivity: 3.5
   walkSpeed: 2
-  runSpeed: 4
+  runSpeed: 8
   gravity: -6
   moveSmootTime: 0.3
   mouseSmootTime: 0.03
-  jumpForce: 5
   jumpHeight: 1
-  groundRaycastDistance: 0.2
-  isJumping: 0
   lockCursor: 1
+  CrouchingHeight: 0.2
+  isJumping: 0
 --- !u!114 &1357517486
 MonoBehaviour:
   m_ObjectHideFlags: 0
