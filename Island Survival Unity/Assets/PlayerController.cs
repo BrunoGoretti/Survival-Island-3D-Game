@@ -81,7 +81,6 @@ public class PlayerController : MonoBehaviour
             {
                 velocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 isJumping = true;
-                playerStats.UpdatedStamina -= 1;
             }
             else
             {
