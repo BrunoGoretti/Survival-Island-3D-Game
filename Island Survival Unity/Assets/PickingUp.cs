@@ -8,11 +8,15 @@ public class PickingUp : MonoBehaviour
     public bool canPickUp;
     public int sticks;
     public GameObject pickUpText;
+    public static bool pick;
+    public static GameObject y;
 
     // Start is called before the first frame update
     void Start()
     {
         sticks = 0;
+
+        pick = false;
     }
 
     // Update is called once per frame
@@ -24,7 +28,8 @@ public class PickingUp : MonoBehaviour
             {
                 Destroy(Item);
                 Item = null;
-                sticks += 1;
+                // sticks += 1;
+                pick = true;
                 canPickUp = false;
             }
         }
@@ -43,6 +48,7 @@ public class PickingUp : MonoBehaviour
     {
         if (col.tag == "item")
         {
+            y = col.gameObject;
             Item = col.gameObject;
             canPickUp = true;
         }
@@ -52,6 +58,7 @@ public class PickingUp : MonoBehaviour
     {
         if (col.tag == "item")
         {
+            y = null;
             Item = null;
             canPickUp = false;
         }
