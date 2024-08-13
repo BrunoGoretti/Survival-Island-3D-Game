@@ -9,6 +9,6 @@ public class TimeLight : MonoBehaviour
     void Update()
     {
         // Rotate the sun around its own axis.
-        transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime); 
+        transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime);
     }
 }
