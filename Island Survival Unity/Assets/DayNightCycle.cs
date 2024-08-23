@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
 public class DayNightCycle : MonoBehaviour
 {
     public float dayDuration = 60.0f; // The duration of a full day in seconds.

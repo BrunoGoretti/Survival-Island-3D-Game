@@ -88,7 +88,26 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        velocityY += gravity * Time.deltaTime;
+        if (transform.position.y < 9.7f)
+        {
+            isRunning = false;
+            if (Input.GetKey(KeyCode.Space)) 
+            {
+                velocityY = Mathf.Lerp(velocityY, 2.0f, 0.1f); 
+            }
+            else if (Input.GetKey(KeyCode.LeftControl)) 
+            {
+                velocityY = Mathf.Lerp(velocityY, -2.0f, 0.1f); 
+            }
+            else
+            {
+                velocityY = Mathf.Lerp(velocityY, 0.0f, 0.1f); 
+            }
+        }
+        else
+        {
+            velocityY += gravity * Time.deltaTime;
+        }
 
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * (isRunning ? runSpeed : walkSpeed) + Vector3.up * velocityY;
 
