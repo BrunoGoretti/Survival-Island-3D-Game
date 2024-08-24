@@ -58,9 +58,14 @@ public class TimeManager : MonoBehaviour
 
     private void OnMinutesChange(int value)
     {
-        // Calculate the new target rotation based on the time progression
-        float rotationAmount = (1f / (1440f / 4f)) * 360f;
-        targetRotation = globalLight.transform.rotation * Quaternion.Euler(Vector3.up * rotationAmount);
+        // Calculate total minutes passed in the day
+        int totalMinutes = (hours * 60) + minutes;
+
+        // Calculate the rotation based on time (360 degrees over 1440 minutes)
+        float rotationAmount = (totalMinutes / 1440f) * 360f;
+
+        // Assuming a light that starts at the horizon at 6:00 AM and returns to the horizon at 6:00 PM
+        targetRotation = Quaternion.Euler(new Vector3(rotationAmount - 90f, 0, 0));
 
         if (value >= 60)
         {
