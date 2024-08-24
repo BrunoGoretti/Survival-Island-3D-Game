@@ -23,7 +23,7 @@ public class TimeManager : MonoBehaviour
         set { minutes = value; OnMinutesChange(value); }
     }
 
-    public int hours = 5;
+    public int hours;
     public int Hours
     {
         get { return hours; }
@@ -40,7 +40,7 @@ public class TimeManager : MonoBehaviour
     public float tempSecond;
 
     private Quaternion targetRotation;
-    private float rotationSpeed = 1f; // Adjust rotation speed as needed
+    private float rotationSpeed = 1f;
 
     public void Update()
     {
@@ -52,20 +52,13 @@ public class TimeManager : MonoBehaviour
             tempSecond = 0;
         }
 
-        // Smoothly rotate the light towards the target rotation
         globalLight.transform.rotation = Quaternion.Slerp(globalLight.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
     }
 
     private void OnMinutesChange(int value)
     {
-        // Calculate total minutes passed in the day
-        int totalMinutes = (hours * 60) + minutes;
-
-        // Calculate the rotation based on time (360 degrees over 1440 minutes)
-        float rotationAmount = (totalMinutes / 1440f) * 360f;
-
-        // Assuming a light that starts at the horizon at 6:00 AM and returns to the horizon at 6:00 PM
-        targetRotation = Quaternion.Euler(new Vector3(rotationAmount - 90f, 0, 0));
+        float rotationAmount = (1f / (1440f / 4f)) * 360f;
+        targetRotation = globalLight.transform.rotation * Quaternion.Euler(Vector3.up * rotationAmount);
 
         if (value >= 60)
         {
