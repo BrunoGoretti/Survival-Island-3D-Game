@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] private Cubemap skyboxDay;
-    [SerializeField] private Cubemap skyboxSunset;
     [SerializeField] private Cubemap skyboxNight;
     [SerializeField] private Cubemap skyboxSunrise;
+    [SerializeField] private Cubemap skyboxDay;
+    [SerializeField] private Cubemap skyboxSunset;
 
-    [SerializeField] private Gradient gradientDayToSunset;
-    [SerializeField] private Gradient gradientSunsetToNight;
     [SerializeField] private Gradient gradientNightToSunrise;
     [SerializeField] private Gradient gradientSunriseToDay;
+    [SerializeField] private Gradient gradientDayToSunset;
+    [SerializeField] private Gradient gradientSunsetToNight;
 
     [SerializeField] private Light globalLight;
 
@@ -42,6 +42,11 @@ public class TimeManager : MonoBehaviour
     private Quaternion targetRotation;
     private float rotationSpeed = 1f;
 
+    private void Start()
+    {
+        Hours = 8;
+    }
+
     public void Update()
     {
         tempSecond += Time.deltaTime;
@@ -57,8 +62,7 @@ public class TimeManager : MonoBehaviour
 
     private void OnMinutesChange(int value)
     {
-        float rotationAmount = (1f / (1440f / 4f)) * 360f;
-        targetRotation = globalLight.transform.rotation * Quaternion.Euler(Vector3.up * rotationAmount);
+
 
         if (value >= 60)
         {
@@ -74,42 +78,43 @@ public class TimeManager : MonoBehaviour
 
     private void OnHoursChange(int value)
     {
-        if (value == 6)
+        float lightIntensity = 0.1f; // Default low intensity for night hours
+        Vector3 lightRotation = Vector3.zero;
+
+        if (value >= 5 && value < 17) // Adjusted time for earlier light intensity change
+        {
+            lightIntensity = Mathf.Lerp(0.1f, 1f, (value - 5) / 12f); // Increase intensity from 0.1 to 1 from 5 AM to 5 PM
+            lightRotation = new Vector3((value - 5) * 15f, 0f, 0f); // Rotate light based on time
+        }
+        else if (value >= 17 || value < 5) // Adjusted time for earlier light intensity decrease
+        {
+            lightIntensity = Mathf.Lerp(1f, 0.1f, (value >= 17 ? value - 17 : value + 7) / 12f); // Decrease intensity from 1 to 0.1 from 5 PM to 5 AM
+            lightRotation = new Vector3((value >= 17 ? value - 17 : value + 7) * 15f + 180f, 0f, 0f); // Rotate light for night
+        }
+
+        globalLight.intensity = lightIntensity;
+        targetRotation = Quaternion.Euler(lightRotation);
+
+        if (value == 5)
         {
             StartCoroutine(LerpSkybox(skyboxNight, skyboxSunrise, 10f));
             StartCoroutine(LerpLight(gradientNightToSunrise, 10f));
-            StartCoroutine(LerpLightIntensity(0.1f, 0.5f, 10f));
         }
-        else if (value == 8)
+        else if (value == 7)
         {
             StartCoroutine(LerpSkybox(skyboxSunrise, skyboxDay, 10f));
             StartCoroutine(LerpLight(gradientSunriseToDay, 10f));
-            StartCoroutine(LerpLightIntensity(0.5f, 1f, 10f));
         }
-        else if (value == 18)
+        else if (value == 17)
         {
             StartCoroutine(LerpSkybox(skyboxDay, skyboxSunset, 10f));
             StartCoroutine(LerpLight(gradientDayToSunset, 10f));
-            StartCoroutine(LerpLightIntensity(1f, 0.5f, 10f));
         }
-        else if (value == 22)
+        else if (value == 19)
         {
             StartCoroutine(LerpSkybox(skyboxSunset, skyboxNight, 10f));
             StartCoroutine(LerpLight(gradientSunsetToNight, 10f));
-            StartCoroutine(LerpLightIntensity(0.5f, 0.1f, 10f));
         }
-    }
-
-    private IEnumerator LerpLightIntensity(float from, float to, float time)
-    {
-        float elapsedTime = 0;
-        while (elapsedTime < time)
-        {
-            globalLight.intensity = Mathf.Lerp(from, to, elapsedTime / time);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        globalLight.intensity = to;
     }
 
     private IEnumerator LerpSkybox(Cubemap a, Cubemap b, float time)

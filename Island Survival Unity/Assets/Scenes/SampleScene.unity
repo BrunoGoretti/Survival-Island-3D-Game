@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.53778774, g: 0.44022644, b: 0.399559, a: 1}
+  m_IndirectSpecularColor: {r: 0.0077834087, g: 0.062289506, b: 0.19571513, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -471,70 +471,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24cedb44dbad71f41982ae114f2aaa62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skyboxDay: {fileID: 8900000, guid: 6b057cc84b9df8440b171f96ff306279, type: 3}
-  skyboxSunset: {fileID: 8900000, guid: 0698dbe339272fb429c6722ca4423bea, type: 2}
   skyboxNight: {fileID: 8900000, guid: ac8a32e5107b67a47939926c52798a2b, type: 3}
   skyboxSunrise: {fileID: 8900000, guid: d01bc0096e819b24db0ea5fbffea90e5, type: 2}
-  gradientDayToSunset:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 0.89019614, g: 0.49411768, b: 0.16078432, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  gradientSunsetToNight:
-    serializedVersion: 2
-    key0: {r: 0.89019614, g: 0.5019608, b: 0.17254902, a: 1}
-    key1: {r: 0.33492574, g: 0.25640798, b: 0.8113208, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
+  skyboxDay: {fileID: 8900000, guid: 6b057cc84b9df8440b171f96ff306279, type: 3}
+  skyboxSunset: {fileID: 8900000, guid: 0698dbe339272fb429c6722ca4423bea, type: 2}
   gradientNightToSunrise:
     serializedVersion: 2
     key0: {r: 0.20159073, g: 0.12922749, b: 0.8301887, a: 1}
@@ -595,9 +535,69 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  gradientDayToSunset:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 0.89019614, g: 0.49411768, b: 0.16078432, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  gradientSunsetToNight:
+    serializedVersion: 2
+    key0: {r: 0.89019614, g: 0.5019608, b: 0.17254902, a: 1}
+    key1: {r: 0.33492574, g: 0.25640798, b: 0.8113208, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
   globalLight: {fileID: 705507994}
   minutes: 0
-  hours: 5
+  hours: 0
   days: 0
   tempSecond: 0
 --- !u!4 &79389166 stripped
@@ -4660,13 +4660,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70355225, y: -0.17733839, z: 0.18851623, w: 0.661836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -151.32509, y: 23.244026, z: 17.149437}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1943610708}
-  m_LocalEulerAnglesHint: {x: 93.5, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &708222793
 PrefabInstance:
   m_ObjectHideFlags: 0
