@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0077834087, g: 0.062289506, b: 0.19571513, a: 1}
+  m_IndirectSpecularColor: {r: 0.11257975, g: 0.41770262, b: 0.72310334, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -597,8 +597,6 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   globalLight: {fileID: 705507994}
   minutes: 0
-  hours: 0
-  days: 0
   tempSecond: 0
 --- !u!4 &79389166 stripped
 Transform:

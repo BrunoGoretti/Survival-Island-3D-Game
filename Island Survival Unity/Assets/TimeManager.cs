@@ -23,14 +23,14 @@ public class TimeManager : MonoBehaviour
         set { minutes = value; OnMinutesChange(value); }
     }
 
-    public int hours;
+    private int hours;
     public int Hours
     {
         get { return hours; }
         set { hours = value; OnHoursChange(value); }
     }
 
-    public int days;
+    private int days;
     public int Days
     {
         get { return days; }
@@ -44,7 +44,15 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        Hours = 8;
+        Hours = 13;
+
+        // Reset skybox and lighting settings
+        RenderSettings.skybox.SetTexture("_Texture1", skyboxDay);
+        RenderSettings.skybox.SetTexture("_Texture2", skyboxDay);
+        RenderSettings.skybox.SetFloat("_Blend", 0);
+
+        globalLight.color = Color.white;
+        RenderSettings.fogColor = Color.white;
     }
 
     public void Update()
@@ -57,13 +65,19 @@ public class TimeManager : MonoBehaviour
             tempSecond = 0;
         }
 
+        // Calculate the time of day as a fraction (0.0 to 1.0) where 0.0 is 00:00 and 1.0 is 24:00
+        float timeOfDay = (hours * 60f + minutes) / (24f * 60f);
+
+        // Calculate the target rotation based on the time of day
+        float targetAngle = timeOfDay * 360f; // 360 degrees for a full day
+        targetRotation = Quaternion.Euler(targetAngle - 90f, 0f, 0f); // -90 to start from horizon
+
+        // Smoothly rotate the light
         globalLight.transform.rotation = Quaternion.Slerp(globalLight.transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
     }
 
     private void OnMinutesChange(int value)
     {
-
-
         if (value >= 60)
         {
             Hours++;
@@ -81,21 +95,34 @@ public class TimeManager : MonoBehaviour
         float lightIntensity = 0.1f; // Default low intensity for night hours
         Vector3 lightRotation = Vector3.zero;
 
-        if (value >= 5 && value < 17) // Adjusted time for earlier light intensity change
+        // Adjust these times to make the light appear earlier and disappear later
+        if (value >= 3 && value < 19) // Light starts increasing at 3 AM and fades after 7 PM
         {
-            lightIntensity = Mathf.Lerp(0.1f, 1f, (value - 5) / 12f); // Increase intensity from 0.1 to 1 from 5 AM to 5 PM
-            lightRotation = new Vector3((value - 5) * 15f, 0f, 0f); // Rotate light based on time
+            if (value < 7) // Before sunrise
+            {
+                lightIntensity = Mathf.Lerp(0.1f, 1f, (value - 3) / 4f); // Increase intensity from 0.1 to 1 from 3 AM to 7 AM
+            }
+            else if (value >= 7 && value < 17) // Daytime
+            {
+                lightIntensity = 1f; // Full intensity during the day
+            }
+            else // After sunset
+            {
+                lightIntensity = Mathf.Lerp(1f, 0.1f, (value - 17) / 2f); // Decrease intensity from 1 to 0.1 from 5 PM to 7 PM
+            }
+            lightRotation = new Vector3((value - 3) * 15f, 0f, 0f); // Rotate light based on adjusted time
         }
-        else if (value >= 17 || value < 5) // Adjusted time for earlier light intensity decrease
+        else // Nighttime
         {
-            lightIntensity = Mathf.Lerp(1f, 0.1f, (value >= 17 ? value - 17 : value + 7) / 12f); // Decrease intensity from 1 to 0.1 from 5 PM to 5 AM
-            lightRotation = new Vector3((value >= 17 ? value - 17 : value + 7) * 15f + 180f, 0f, 0f); // Rotate light for night
+            lightIntensity = 0.1f;
+            lightRotation = new Vector3((value >= 19 ? value - 19 : value + 5) * 15f + 270f, 0f, 0f); // Adjusted rotation for nighttime
         }
 
         globalLight.intensity = lightIntensity;
         targetRotation = Quaternion.Euler(lightRotation);
 
-        if (value == 5)
+        // Skybox and lighting transitions
+        if (value == 3)
         {
             StartCoroutine(LerpSkybox(skyboxNight, skyboxSunrise, 10f));
             StartCoroutine(LerpLight(gradientNightToSunrise, 10f));
@@ -138,5 +165,18 @@ public class TimeManager : MonoBehaviour
             RenderSettings.fogColor = globalLight.color;
             yield return null;
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        // Reset skybox to default
+        RenderSettings.skybox.SetTexture("_Texture1", skyboxDay); 
+        RenderSettings.skybox.SetTexture("_Texture2", skyboxDay);
+        RenderSettings.skybox.SetFloat("_Blend", 0);
+
+        // Reset light settings to default
+        globalLight.color = Color.white;
+        globalLight.intensity = 1f;
+        RenderSettings.fogColor = Color.white;
     }
 }
