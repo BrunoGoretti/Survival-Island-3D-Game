@@ -10103,7 +10103,7 @@ MonoBehaviour:
   runSpeed: 8
   gravity: -6
   moveSmootTime: 0.3
-  mouseSmootTime: 0.03
+  mouseSmootTime: 0.053
   jumpHeight: 1
   lockCursor: 1
   CrouchingHeight: 0.2

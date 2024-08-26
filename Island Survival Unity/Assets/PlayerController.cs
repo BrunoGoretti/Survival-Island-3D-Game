@@ -109,6 +109,19 @@ public class PlayerController : MonoBehaviour
             velocityY += gravity * Time.deltaTime;
         }
 
+        if (transform.position.y < 9.48f)
+        {
+            RenderSettings.fog = true; 
+            RenderSettings.fogDensity = 1f; 
+            RenderSettings.fogStartDistance = 1f; 
+            RenderSettings.fogEndDistance = 20f; 
+            RenderSettings.fogColor = Color.blue; 
+        }
+        else
+        {
+            RenderSettings.fog = false; 
+        }
+
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * (isRunning ? runSpeed : walkSpeed) + Vector3.up * velocityY;
 
         if (isCrouching)
