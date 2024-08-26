@@ -109,7 +109,9 @@ public class PlayerController : MonoBehaviour
             velocityY += gravity * Time.deltaTime;
         }
 
-        if (transform.position.y < 9.48f)
+        var deepFogWaterlevel = 9.48f;
+
+        if (transform.position.y < deepFogWaterlevel)
         {
             RenderSettings.fog = true; 
             RenderSettings.fogDensity = 1f; 
