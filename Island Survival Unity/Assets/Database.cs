@@ -8,9 +8,9 @@ public class Database : MonoBehaviour
 
     void Awake()
     {
-        itemList.Add(new Item(0, "None", "None", Resources.Load <Sprite>("0"), 0));
-        itemList.Add(new Item(1, "Stick", "It is item", Resources.Load <Sprite>("1"), 0));
-        itemList.Add(new Item(2, "Stone", "It is item", Resources.Load <Sprite>("2"), 0));
-        itemList.Add(new Item(3, "Coconut", "It is item", Resources.Load <Sprite>("3"), 0));
+        itemList.Add(new Item(0, "None", "None", Resources.Load <Sprite>("0"), false, 0));
+        itemList.Add(new Item(1, "Stick", "It is item", Resources.Load <Sprite>("1"), false, 0));
+        itemList.Add(new Item(2, "Stone", "It is item", Resources.Load <Sprite>("2"), false, 0));
+        itemList.Add(new Item(3, "Coconut", "It is item", Resources.Load<Sprite>("3"), true, 25));
     }
 }

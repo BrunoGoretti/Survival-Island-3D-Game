@@ -24,18 +24,20 @@ public class PlayerStats : MonoBehaviour
     public Text StaminaText;
 
     public float UpdatedHealth;
-    public float UpdatedHunger;
+    public static float UpdatedHunger;
     public float UpdatedStamina;
 
     public void Start()
     {
         HealInCreasedPerSecond = 5f;
         HungerInCreasedPerSecond = -1f;
-        StaminaInCreasedPerSecond = 0.8f; 
+        StaminaInCreasedPerSecond = 1f; 
 
         maxHealt = 1000;
         maxHunger = 1000;
         maxStamina = 10;
+
+        UpdatedHunger = 800;
     }
 
     public void Update()

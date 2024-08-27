@@ -29,11 +29,13 @@ public class Inventory : MonoBehaviour
     public int rest;
     public bool shift;
 
+    public bool canConsume;
+
     void Start()
     {
-        yourInventory[1] = Database.itemList[1];
+        yourInventory[1] = Database.itemList[3];
         slotStack[1] = 3;
-        yourInventory[2] = Database.itemList[1];
+        yourInventory[2] = Database.itemList[3];
         slotStack[2] = 2;
     }
 
@@ -111,6 +113,31 @@ public class Inventory : MonoBehaviour
                 }
             }
             PickingUp.pick = false;
+        }
+
+        if (yourInventory[b].consumable == true)
+        {
+            canConsume = true;
+        }
+        else
+        {
+            canConsume = false;
+        }
+
+        if (canConsume == true && Input.GetMouseButtonDown(1))
+        {
+            if (slotStack[b] == 1)
+            {
+                PlayerStats.UpdatedHunger += yourInventory[b].nutritionaValue;
+                yourInventory[b] = Database.itemList[0];
+                slotStack[b] = 0;
+            }
+            else
+            {
+
+                slotStack[b] --;
+                PlayerStats.UpdatedHunger += yourInventory[b].nutritionaValue;
+            }
         }
     }
 
