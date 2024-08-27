@@ -12,16 +12,19 @@ public class Item
 
     public Sprite itemSprite;
 
+    public int stack; 
+
     public Item()
     {
 
     }
 
-    public Item(int Id, string Name, string Description, Sprite ItemSprite)
+    public Item(int Id, string Name, string Description, Sprite ItemSprite, int Stack)
     {
         id = Id;
         name = Name;
         description = Description;
         itemSprite = ItemSprite;
+        stack = Stack;
     }
 }

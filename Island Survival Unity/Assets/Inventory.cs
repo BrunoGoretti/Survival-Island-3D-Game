@@ -10,14 +10,16 @@ public class Inventory : MonoBehaviour
     public int slotsNumber;
     public GameObject x;
     public int n;
+
     public Image[] slot;
     public Sprite[] slotsSprite;
+    public Text[] stackText;
 
     void Start()
     {
-        //TEST
+       /* //TEST
         yourInventory[0] = Database.itemList[2];
-        yourInventory[3] = Database.itemList[2];
+        yourInventory[3] = Database.itemList[2];*/
     }
 
     void Update()
@@ -31,6 +33,7 @@ public class Inventory : MonoBehaviour
         {
             slotsSprite[i] = yourInventory[i].itemSprite;
         }
+
 
         if (PickingUp.y != null)
         {
@@ -46,13 +49,29 @@ public class Inventory : MonoBehaviour
         {
             for(int i = 0; i < slotsNumber; i++)
             {
+                if(yourInventory[i].id == n)
+                {
+                    yourInventory[i].stack += 1;
+                    i = slotsNumber;
+                    PickingUp.pick = false;
+                }
+            }
+
+            for(int i = 0; i < slotsNumber; i++)
+            {
                 if(yourInventory[i].id == 0 && PickingUp.pick == true)
                 {
                     yourInventory[i] = Database.itemList[n];
+                    yourInventory[i].stack += 1;
                     PickingUp.pick = false;
                 }
             }
             PickingUp.pick = false;
+        }
+
+        for (int i = 0; i < slotsNumber; i++)
+        {
+            stackText[i].text = "" + yourInventory[i].stack;
         }
     }
 }
