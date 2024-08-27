@@ -21,10 +21,13 @@ public class Inventory : MonoBehaviour
     public int a;
     public int b;
 
+    public int[] slotStack;
+    public int maxStack;
+
     void Start()
     {
-        yourInventory[1] = Database.itemList[2];
-        yourInventory[1].stack += 4;
+/*        yourInventory[1] = Database.itemList[2];
+        yourInventory[1].stack += 4;*/
     }
 
     void Update()
@@ -37,7 +40,7 @@ public class Inventory : MonoBehaviour
             }
             else
             {
-                stackText[i].text = "" + yourInventory[i].stack;
+                stackText[i].text = "" + slotStack[i];
             }
         }
 
@@ -68,9 +71,16 @@ public class Inventory : MonoBehaviour
             {
                 if (yourInventory[i].id == n)
                 {
-                    yourInventory[i].stack += 1;
-                    i = slotsNumber;
-                    PickingUp.pick = false;
+                    if (slotStack[i] == maxStack)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        slotStack[i] += 1;
+                        i = slotsNumber;
+                        PickingUp.pick = false;
+                    }
                 }
             }
 
@@ -79,7 +89,7 @@ public class Inventory : MonoBehaviour
                 if (yourInventory[i].id == 0 && PickingUp.pick == true)
                 {
                     yourInventory[i] = Database.itemList[n];
-                    yourInventory[i].stack += 1;
+                    slotStack[i] += 1;
                     PickingUp.pick = false;
                 }
             }
