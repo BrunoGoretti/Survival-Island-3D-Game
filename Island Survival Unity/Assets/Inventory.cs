@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Inventory : MonoBehaviour
     public int slotsNumber;
     public GameObject x;
     public int n;
+    public Image[] slot;
+    public Sprite[] slotsSprite;
 
     void Start()
     {
@@ -19,7 +22,17 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        if(PickingUp.y != null)
+        for (int i = 0; i < slotsNumber; i++)
+        {
+            slot[i].sprite = slotsSprite[i];
+        }
+
+        for (int i = 0; i < slotsNumber; i++)
+        {
+            slotsSprite[i] = yourInventory[i].itemSprite;
+        }
+
+        if (PickingUp.y != null)
         {
             x = PickingUp.y;
             n = x.GetComponent<ThisItem>().thisId;

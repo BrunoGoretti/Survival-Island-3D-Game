@@ -8,17 +8,20 @@ public class Item
 {
     public int id;
     public string name; 
-    public string description; 
+    public string description;
+
+    public Sprite itemSprite;
 
     public Item()
     {
 
     }
 
-    public Item(int Id, string Name, string Description)
+    public Item(int Id, string Name, string Description, Sprite ItemSprite)
     {
         id = Id;
         name = Name;
         description = Description;
+        itemSprite = ItemSprite;
     }
 }
