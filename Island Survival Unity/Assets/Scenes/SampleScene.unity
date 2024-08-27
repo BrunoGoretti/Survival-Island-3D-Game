@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 173213350}
   - component: {fileID: 173213352}
   - component: {fileID: 173213351}
+  - component: {fileID: 173213353}
   m_Layer: 5
   m_Name: InventoryCube (10)
   m_TagString: Untagged
@@ -1529,6 +1530,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173213349}
   m_CullTransparentMesh: 1
+--- !u!114 &173213353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173213349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 173213351}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 173213351}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 173213351}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &177982608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +2952,7 @@ GameObject:
   - component: {fileID: 359930691}
   - component: {fileID: 359930693}
   - component: {fileID: 359930692}
+  - component: {fileID: 359930694}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -2960,6 +3023,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359930690}
   m_CullTransparentMesh: 1
+--- !u!114 &359930694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359930690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &359950067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5040999029845126399, guid: 4c21d1db699d9874986a9f704fd22884, type: 3}
@@ -3441,6 +3517,7 @@ GameObject:
   - component: {fileID: 394498251}
   - component: {fileID: 394498253}
   - component: {fileID: 394498252}
+  - component: {fileID: 394498254}
   m_Layer: 5
   m_Name: InventoryCube (3)
   m_TagString: Untagged
@@ -3506,6 +3583,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394498250}
   m_CullTransparentMesh: 1
+--- !u!114 &394498254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394498250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 394498252}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 394498252}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 394498252}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &401770990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3742,6 +3880,7 @@ GameObject:
   - component: {fileID: 418915054}
   - component: {fileID: 418915056}
   - component: {fileID: 418915055}
+  - component: {fileID: 418915057}
   m_Layer: 5
   m_Name: InventoryCube (18)
   m_TagString: Untagged
@@ -3807,6 +3946,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418915053}
   m_CullTransparentMesh: 1
+--- !u!114 &418915057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418915053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 418915055}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 418915055}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 418915055}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &428440478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4079,6 +4279,7 @@ GameObject:
   - component: {fileID: 494133903}
   - component: {fileID: 494133905}
   - component: {fileID: 494133904}
+  - component: {fileID: 494133906}
   m_Layer: 5
   m_Name: InventoryCube (15)
   m_TagString: Untagged
@@ -4144,6 +4345,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494133902}
   m_CullTransparentMesh: 1
+--- !u!114 &494133906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494133902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 494133904}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 494133904}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 494133904}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &512331572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4828,6 +5090,7 @@ GameObject:
   - component: {fileID: 633356157}
   - component: {fileID: 633356159}
   - component: {fileID: 633356158}
+  - component: {fileID: 633356160}
   m_Layer: 5
   m_Name: InventoryCube (5)
   m_TagString: Untagged
@@ -4893,6 +5156,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633356156}
   m_CullTransparentMesh: 1
+--- !u!114 &633356160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633356156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 633356158}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 633356158}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 633356158}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &636549833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6548,6 +6872,7 @@ GameObject:
   - component: {fileID: 793708677}
   - component: {fileID: 793708679}
   - component: {fileID: 793708678}
+  - component: {fileID: 793708680}
   m_Layer: 5
   m_Name: InventoryCube
   m_TagString: Untagged
@@ -6613,6 +6938,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793708676}
   m_CullTransparentMesh: 1
+--- !u!114 &793708680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793708676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 793708678}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 793708678}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 793708678}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &802428257
 GameObject:
   m_ObjectHideFlags: 0
@@ -9260,6 +9646,7 @@ GameObject:
   - component: {fileID: 1105685207}
   - component: {fileID: 1105685209}
   - component: {fileID: 1105685208}
+  - component: {fileID: 1105685210}
   m_Layer: 5
   m_Name: InventoryCube (4)
   m_TagString: Untagged
@@ -9325,6 +9712,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105685206}
   m_CullTransparentMesh: 1
+--- !u!114 &1105685210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105685206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1105685208}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1105685208}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1105685208}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1110592352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 52e2512f399a76e468f7dd7831aad3e7, type: 3}
@@ -9497,6 +9945,7 @@ GameObject:
   - component: {fileID: 1136471684}
   - component: {fileID: 1136471686}
   - component: {fileID: 1136471685}
+  - component: {fileID: 1136471687}
   m_Layer: 5
   m_Name: InventoryCube (17)
   m_TagString: Untagged
@@ -9562,6 +10011,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136471683}
   m_CullTransparentMesh: 1
+--- !u!114 &1136471687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136471683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1136471685}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1136471685}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1136471685}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1145351586
 GameObject:
   m_ObjectHideFlags: 0
@@ -9654,6 +10164,7 @@ GameObject:
   - component: {fileID: 1145390216}
   - component: {fileID: 1145390218}
   - component: {fileID: 1145390217}
+  - component: {fileID: 1145390219}
   m_Layer: 5
   m_Name: InventoryCube (14)
   m_TagString: Untagged
@@ -9719,6 +10230,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145390215}
   m_CullTransparentMesh: 1
+--- !u!114 &1145390219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145390215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1145390217}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1145390217}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1145390217}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1163751920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11837,6 +12409,12 @@ MonoBehaviour:
     description: 
     itemSprite: {fileID: 21300000, guid: 0dc39c242439de040b82b98837b35dbe, type: 3}
     stack: 0
+  draggedItem:
+  - id: 0
+    name: 
+    description: 
+    itemSprite: {fileID: 0}
+    stack: 0
   slotsNumber: 20
   x: {fileID: 0}
   n: 0
@@ -11903,6 +12481,8 @@ MonoBehaviour:
   - {fileID: 2077238569}
   - {fileID: 1145351588}
   - {fileID: 1468139193}
+  a: 0
+  b: 0
 --- !u!114 &1357517488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11926,6 +12506,7 @@ GameObject:
   - component: {fileID: 1362317095}
   - component: {fileID: 1362317097}
   - component: {fileID: 1362317096}
+  - component: {fileID: 1362317098}
   m_Layer: 5
   m_Name: InventoryCube (9)
   m_TagString: Untagged
@@ -11991,6 +12572,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362317094}
   m_CullTransparentMesh: 1
+--- !u!114 &1362317098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362317094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1362317096}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1362317096}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1362317096}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1363142551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12361,6 +13003,7 @@ GameObject:
   - component: {fileID: 1391886782}
   - component: {fileID: 1391886784}
   - component: {fileID: 1391886783}
+  - component: {fileID: 1391886785}
   m_Layer: 5
   m_Name: InventoryCube (19)
   m_TagString: Untagged
@@ -12426,6 +13069,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391886781}
   m_CullTransparentMesh: 1
+--- !u!114 &1391886785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391886781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1391886783}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1391886783}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1391886783}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1404285535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12584,6 +13288,7 @@ GameObject:
   - component: {fileID: 1426352425}
   - component: {fileID: 1426352427}
   - component: {fileID: 1426352426}
+  - component: {fileID: 1426352428}
   m_Layer: 5
   m_Name: InventoryCube (1)
   m_TagString: Untagged
@@ -12649,6 +13354,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426352424}
   m_CullTransparentMesh: 1
+--- !u!114 &1426352428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426352424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1426352426}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1426352426}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1426352426}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1442293953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14603,6 +15369,7 @@ GameObject:
   - component: {fileID: 1692141510}
   - component: {fileID: 1692141512}
   - component: {fileID: 1692141511}
+  - component: {fileID: 1692141513}
   m_Layer: 5
   m_Name: InventoryCube (11)
   m_TagString: Untagged
@@ -14668,6 +15435,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692141509}
   m_CullTransparentMesh: 1
+--- !u!114 &1692141513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692141509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1692141511}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1692141511}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1692141511}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1701166331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1e9f07292bc7d7c4b9ab964999e99fc6, type: 3}
@@ -14761,6 +15589,7 @@ GameObject:
   - component: {fileID: 1715076639}
   - component: {fileID: 1715076641}
   - component: {fileID: 1715076640}
+  - component: {fileID: 1715076642}
   m_Layer: 5
   m_Name: InventoryCube (12)
   m_TagString: Untagged
@@ -14826,6 +15655,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715076638}
   m_CullTransparentMesh: 1
+--- !u!114 &1715076642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715076638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1715076640}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1715076640}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1715076640}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1726270019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 419418, guid: 785bfd81c9fb838469851c06eb415f7a, type: 3}
@@ -15309,6 +16199,7 @@ GameObject:
   - component: {fileID: 1848026043}
   - component: {fileID: 1848026045}
   - component: {fileID: 1848026044}
+  - component: {fileID: 1848026046}
   m_Layer: 5
   m_Name: InventoryCube (13)
   m_TagString: Untagged
@@ -15374,6 +16265,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848026042}
   m_CullTransparentMesh: 1
+--- !u!114 &1848026046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848026042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1848026044}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1848026044}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1848026044}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1848699358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1580932747654484967, guid: 189bfce550a467b4d9b998c857a3e26b, type: 3}
@@ -15390,6 +16342,7 @@ GameObject:
   - component: {fileID: 1849755630}
   - component: {fileID: 1849755632}
   - component: {fileID: 1849755631}
+  - component: {fileID: 1849755633}
   m_Layer: 5
   m_Name: InventoryCube (6)
   m_TagString: Untagged
@@ -15455,6 +16408,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849755629}
   m_CullTransparentMesh: 1
+--- !u!114 &1849755633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849755629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1849755631}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1849755631}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1849755631}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1851727630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15865,6 +16879,7 @@ GameObject:
   - component: {fileID: 1906021305}
   - component: {fileID: 1906021307}
   - component: {fileID: 1906021306}
+  - component: {fileID: 1906021308}
   m_Layer: 5
   m_Name: InventoryCube (2)
   m_TagString: Untagged
@@ -15930,6 +16945,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906021304}
   m_CullTransparentMesh: 1
+--- !u!114 &1906021308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906021304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1906021306}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1906021306}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1906021306}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1917628428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 437888, guid: ecc2762d91d3584429565bde5fbede9e, type: 3}
@@ -16483,6 +17559,7 @@ GameObject:
   - component: {fileID: 2018738705}
   - component: {fileID: 2018738707}
   - component: {fileID: 2018738706}
+  - component: {fileID: 2018738708}
   m_Layer: 5
   m_Name: InventoryCube (8)
   m_TagString: Untagged
@@ -16548,6 +17625,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018738704}
   m_CullTransparentMesh: 1
+--- !u!114 &2018738708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018738704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2018738706}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2018738706}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2018738706}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &2023730952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17036,6 +18174,7 @@ GameObject:
   - component: {fileID: 2079227688}
   - component: {fileID: 2079227690}
   - component: {fileID: 2079227689}
+  - component: {fileID: 2079227691}
   m_Layer: 5
   m_Name: InventoryCube (16)
   m_TagString: Untagged
@@ -17101,6 +18240,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079227687}
   m_CullTransparentMesh: 1
+--- !u!114 &2079227691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079227687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2079227689}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2079227689}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2079227689}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2084245133
 GameObject:
   m_ObjectHideFlags: 0
@@ -17198,6 +18398,7 @@ GameObject:
   - component: {fileID: 2092257521}
   - component: {fileID: 2092257523}
   - component: {fileID: 2092257522}
+  - component: {fileID: 2092257524}
   m_Layer: 5
   m_Name: InventoryCube (7)
   m_TagString: Untagged
@@ -17263,6 +18464,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092257520}
   m_CullTransparentMesh: 1
+--- !u!114 &2092257524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092257520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: StartDrag
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2092257522}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Drop
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2092257522}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1357517487}
+          m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2092257522}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &2096597115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e88bec1c92add0148bcddd543087ad06, type: 3}

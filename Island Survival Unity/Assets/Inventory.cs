@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public List<Item> yourInventory = new List<Item>();
+
+    public List<Item> draggedItem = new List<Item>();
 
     public int slotsNumber;
     public GameObject x;
@@ -15,11 +18,13 @@ public class Inventory : MonoBehaviour
     public Sprite[] slotsSprite;
     public Text[] stackText;
 
+    public int a;
+    public int b;
+
     void Start()
     {
-       /* //TEST
-        yourInventory[0] = Database.itemList[2];
-        yourInventory[3] = Database.itemList[2];*/
+        yourInventory[1] = Database.itemList[2];
+        yourInventory[1].stack += 4;
     }
 
     void Update()
@@ -45,11 +50,11 @@ public class Inventory : MonoBehaviour
             x = null;
         }
 
-        if(PickingUp.pick == true)
+        if (PickingUp.pick == true)
         {
-            for(int i = 0; i < slotsNumber; i++)
+            for (int i = 0; i < slotsNumber; i++)
             {
-                if(yourInventory[i].id == n)
+                if (yourInventory[i].id == n)
                 {
                     yourInventory[i].stack += 1;
                     i = slotsNumber;
@@ -57,9 +62,9 @@ public class Inventory : MonoBehaviour
                 }
             }
 
-            for(int i = 0; i < slotsNumber; i++)
+            for (int i = 0; i < slotsNumber; i++)
             {
-                if(yourInventory[i].id == 0 && PickingUp.pick == true)
+                if (yourInventory[i].id == 0 && PickingUp.pick == true)
                 {
                     yourInventory[i] = Database.itemList[n];
                     yourInventory[i].stack += 1;
@@ -72,6 +77,46 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < slotsNumber; i++)
         {
             stackText[i].text = "" + yourInventory[i].stack;
+        }
+    }
+
+    public void StartDrag(Image slotX)
+    {
+        print("start drag: " + slotX.name);
+
+        for (int i = 0; i < slotsNumber; i++)
+        {
+            if (slot[i] == slotX)
+            {
+                a = i;
+            }
+        }
+    }
+
+    public void Drop(Image slotX) 
+    {
+        print("stop drag: " + slotX.name);
+
+        if (a != b)
+        {
+            draggedItem[0] = yourInventory[a];
+            yourInventory[a] = yourInventory[b];
+            yourInventory[b] = draggedItem[0];
+            a = 0;
+            b = 0;
+        }
+    }
+
+    public void Enter(Image slotX)
+    {
+        print("enter");
+
+        for (int i = 0; i < slotsNumber; i++)
+        {
+            if (slot[i] == slotX)
+            {
+                b = i;
+            }
         }
     }
 }
