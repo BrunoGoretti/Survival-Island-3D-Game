@@ -31,6 +31,18 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < slotsNumber; i++)
         {
+            if (yourInventory[i].id == 0)
+            {
+                stackText[i].text = "";
+            }
+            else
+            {
+                stackText[i].text = "" + yourInventory[i].stack;
+            }
+        }
+
+        for (int i = 0; i < slotsNumber; i++)
+        {
             slot[i].sprite = slotsSprite[i];
         }
 
@@ -72,11 +84,6 @@ public class Inventory : MonoBehaviour
                 }
             }
             PickingUp.pick = false;
-        }
-
-        for (int i = 0; i < slotsNumber; i++)
-        {
-            stackText[i].text = "" + yourInventory[i].stack;
         }
     }
 
