@@ -26,6 +26,9 @@ public class Inventory : MonoBehaviour
 
     public int slotTemporary;
 
+    public int rest;
+    public bool shift;
+
     void Start()
     {
         yourInventory[1] = Database.itemList[1];
@@ -36,6 +39,16 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown("left shift"))
+        {
+            shift = true;
+        }
+
+        if (Input.GetKeyUp("left shift"))
+        {
+            shift = false;
+        }
+
         for (int i = 0; i < slotsNumber; i++)
         {
             if (yourInventory[i].id == 0)
@@ -114,38 +127,52 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void Drop(Image slotX) 
+    public void Drop(Image slotX)
     {
-        print("stop drag: " + slotX.name);
-
-        if (a != b)
+        if (shift == true)
         {
-            if (yourInventory[a].id != yourInventory[b].id)
+            if (yourInventory[b].id == 0 && slotStack[a] >= 2)
             {
-
-                draggedItem[0] = yourInventory[a];
-                slotTemporary = slotStack[a];
-                yourInventory[a] = yourInventory[b];
-                slotStack[a] = slotStack[b];
-                yourInventory[b] = draggedItem[0];
-                slotStack[b] = slotTemporary;
-                a = 0;
-                b = 0;
+                yourInventory[b] = yourInventory[a];
+                slotStack[b] = slotStack[a] / 2;
+                rest = slotStack[a] % 2;
+                slotStack[a] = slotStack[a] / 2 + rest;
             }
-            else
+        }
+        else
+        {
+            print("stop drag: " + slotX.name);
+
+            if (a != b)
             {
-                if (slotStack[a] + slotStack[b] <= maxStack)
+                if (yourInventory[a].id != yourInventory[b].id)
                 {
-                    slotStack[b] = slotStack[a] + slotStack[b];
-                    yourInventory[a] = Database.itemList[0];
+
+                    draggedItem[0] = yourInventory[a];
+                    slotTemporary = slotStack[a];
+                    yourInventory[a] = yourInventory[b];
+                    slotStack[a] = slotStack[b];
+                    yourInventory[b] = draggedItem[0];
+                    slotStack[b] = slotTemporary;
+                    a = 0;
+                    b = 0;
                 }
                 else
                 {
-                    slotStack[a] = slotStack[a] + slotStack[b] - maxStack;
-                    slotStack[b] = maxStack;
+                    if (slotStack[a] + slotStack[b] <= maxStack)
+                    {
+                        slotStack[b] = slotStack[a] + slotStack[b];
+                        yourInventory[a] = Database.itemList[0];
+                    }
+                    else
+                    {
+                        slotStack[a] = slotStack[a] + slotStack[b] - maxStack;
+                        slotStack[b] = maxStack;
+                    }
                 }
             }
         }
+
     }
 
     public void Enter(Image slotX)
