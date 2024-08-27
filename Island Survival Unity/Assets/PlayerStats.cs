@@ -37,7 +37,7 @@ public class PlayerStats : MonoBehaviour
         maxHunger = 1000;
         maxStamina = 10;
 
-        UpdatedHunger = 800;
+        UpdatedHunger = 1000;
     }
 
     public void Update()
