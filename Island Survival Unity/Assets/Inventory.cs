@@ -24,10 +24,14 @@ public class Inventory : MonoBehaviour
     public int[] slotStack;
     public int maxStack;
 
+    public int slotTemporary;
+
     void Start()
     {
-/*        yourInventory[1] = Database.itemList[2];
-        yourInventory[1].stack += 4;*/
+        yourInventory[1] = Database.itemList[1];
+        slotStack[1] = 3;
+        yourInventory[2] = Database.itemList[1];
+        slotStack[2] = 2;
     }
 
     void Update()
@@ -116,11 +120,31 @@ public class Inventory : MonoBehaviour
 
         if (a != b)
         {
-            draggedItem[0] = yourInventory[a];
-            yourInventory[a] = yourInventory[b];
-            yourInventory[b] = draggedItem[0];
-            a = 0;
-            b = 0;
+            if (yourInventory[a].id != yourInventory[b].id)
+            {
+
+                draggedItem[0] = yourInventory[a];
+                slotTemporary = slotStack[a];
+                yourInventory[a] = yourInventory[b];
+                slotStack[a] = slotStack[b];
+                yourInventory[b] = draggedItem[0];
+                slotStack[b] = slotTemporary;
+                a = 0;
+                b = 0;
+            }
+            else
+            {
+                if (slotStack[a] + slotStack[b] <= maxStack)
+                {
+                    slotStack[b] = slotStack[a] + slotStack[b];
+                    yourInventory[a] = Database.itemList[0];
+                }
+                else
+                {
+                    slotStack[a] = slotStack[a] + slotStack[b] - maxStack;
+                    slotStack[b] = maxStack;
+                }
+            }
         }
     }
 
