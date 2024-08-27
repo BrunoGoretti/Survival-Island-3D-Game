@@ -10,6 +10,7 @@ Dynamic Environment: Experience a realistic 3D environment with changing time of
 
 Exploration: Roam around the island, searching for food and shelter while avoiding dangerous areas.
 
+![17](https://github.com/user-attachments/assets/e48dfe1c-c420-430f-878f-336e8e386721)
 ![15](https://github.com/user-attachments/assets/2f64ccb5-cd00-4e1a-962e-fbb50b5736ac)
 ![14](https://github.com/user-attachments/assets/e51ccf34-cc2e-4def-bac6-1c5eb602d90b)
 ![16](https://github.com/user-attachments/assets/933a91bd-1136-4515-92b5-a774bff4096d)
