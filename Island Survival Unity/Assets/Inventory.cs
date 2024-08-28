@@ -33,10 +33,10 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        yourInventory[1] = Database.itemList[3];
+/*        yourInventory[1] = Database.itemList[3];
         slotStack[1] = 3;
         yourInventory[2] = Database.itemList[3];
-        slotStack[2] = 2;
+        slotStack[2] = 2;*/
     }
 
     void Update()
