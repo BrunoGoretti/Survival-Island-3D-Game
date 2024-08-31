@@ -8,7 +8,7 @@ Hunger System: Your character has a hunger meter that gradually decreases over t
 
 Dynamic Environment: Experience a realistic 3D environment with changing time of day, adding to the challenge of survival.
 
-Exploration: Roam around the island, searching for food and shelter while avoiding dangerous areas.
+Exploration: Roam around the island, searching for food and shelter.
 
 ![18](https://github.com/user-attachments/assets/74e78f59-12b2-479e-b712-590491454916)
 ![17](https://github.com/user-attachments/assets/e48dfe1c-c420-430f-878f-336e8e386721)
